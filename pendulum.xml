@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="01/29/19||10:44:09" using="Simscape Multibody Link Version 5.1" from="SolidWorks 24.4.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="pendulum" uid="pendulum" version="134">
+<AssemblyFile name="pendulum.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="arm-1" uid="arm-1" entityUid="arm">
+<Transform>
+<Rotation>0.82976319263717724 -0.55811561897563733 0 0.55811561897563733 0.82976319263717724 0 0 0 1</Rotation>
+<Translation>-0.28469755058714102 0.05790865187232689 1.0425000000000006</Translation>
+</Transform>
+</Instance>
+<Instance name="rail-1" uid="rail-1" grounded="true" entityUid="rail">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.18633037718084511 0.0054086518723269437 1</Translation>
+</Transform>
+</Instance>
+<Instance name="car-1" uid="car-1" entityUid="car">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.28469755058714108 0.034068905910171324 1</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>rail-1</Uid>
+</InstancePath>
+<Position>0.5 0.02866025403784438 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>car-1</Uid>
+</InstancePath>
+<Position>0.020000000000000018 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>rail-1</Uid>
+</InstancePath>
+<Position>0.5 0.0099999999999999933 0.0049999999999998934</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>car-1</Uid>
+</InstancePath>
+<Position>0.020000000000000018 -0.0086602540378443865 0.0049999999999998934</Position>
+<Axis>0 5.2041704279304203e-16 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>car-1</Uid>
+</InstancePath>
+<Position>0 0.023839745962155608 -0.057720018726587607</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>arm-1</Uid>
+</InstancePath>
+<Position>0 0 -0.057499999999999996</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>car-1</Uid>
+</InstancePath>
+<Position>0.020000000000000018 -0.013660254037844391 -0.015000000000000013</Position>
+<Axis>0 2.312964634635743e-16 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>arm-1</Uid>
+</InstancePath>
+<Position>0 0 -0.057499999999999996</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="arm" uid="arm" version="152">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="arm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.087876015712528149</Mass>
+<CenterOfMass>0 -0.12035733393831537 -0.0041392127473479264</CenterOfMass>
+<Inertia>0.00090994303859478012 1.3909385526841839e-05 0.00089736545477514193 4.3778478692928531e-05 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="arm.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="car" uid="car" version="155">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="car.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.084169409401754061</Mass>
+<CenterOfMass>0 0.0079476565506804986 0</CenterOfMass>
+<Inertia>1.9891341735775271e-05 1.8526314866121439e-05 2.1641476150820278e-05 0 1.6140971419415662e-12 0</Inertia>
+</MassProperties>
+<GeometryFile name="car.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="rail" uid="rail" version="148">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="rail.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.0306311132673471</Mass>
+<CenterOfMass>0 0.01420782076364536 0</CenterOfMass>
+<Inertia>0.0018014125983885976 0.58635562833352695 0.58643039913962991 0 1.7117901370148203e-08 0</Inertia>
+</MassProperties>
+<GeometryFile name="rail.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0.13588235294117648" g="0.13011764705882353" b="0.12352941176470589" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
