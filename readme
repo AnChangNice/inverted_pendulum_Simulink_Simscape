@@ -1,0 +1,18 @@
+文件说明：
+    直立控制：pendulum_angle_loop.slx
+    直立+位置控制：pendulum_position_loop.slx
+ 
+*.SLDPRT - SolidWorks 零件
+*.SLDASM - SolidWorks 装配体
+*.STEP - SolidWorks 导出的零件，供Simscape使用
+*.STEP - SolidWorks 导出的零件，供Simscape使用
+*.xml - SolidWorks 导出的，供matlab 导入SimscapeMultibody使用，
+
+将模型导入的命令：smimport('*.xml')
+
+注意点：
+    SolidWorks 要使用全英文环境，否则会造成中文字符显示为乱码，导入的零件无法显示。
+    此时有两种方法：
+      1.在*.xml中删除零件名称后的乱码，而后再使用smimport()。
+      2.若已经导入，不显示零件，在Simscape的模块内手动连接*.STEP文件。
+    Simscape导入的零件姿态在joint模块中调整。
